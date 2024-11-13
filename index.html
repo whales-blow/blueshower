@@ -10,7 +10,7 @@
 </head>
 <body class="mainPage">
     <div class="mainArea">
-        <div class="navbar absolute bg-none">
+        <div class="navbar fixed bg-none">
             <div class="navbar_inner flex justify-between">
                 <!--logo-->
                 <div class="logo">
@@ -19,7 +19,7 @@
                 </div>
                 <!--nav-->
                 <nav class="flex">
-                    <ul>
+                    <ul class="text-white">
                         <li>about</li>
                         <li>Design</li>
                         <li>Planning</li>
@@ -34,5 +34,21 @@
         <h1 class="bg-amber-400">Hello, Tailwind!</h1>
         <p class="text-blue-700">안녕하세요! 반갑습니다!!!!!</p>
     </div>
+    <script>
+        window.addEventListener("scroll", function() {
+          const navbar = document.getElementById("navbar");
+      
+          // 화면 너비에 따라 기준을 다르게 설정
+          const scrollThreshold = window.innerWidth < 768 ? 30 : 50;  // 모바일에서는 30px, PC에서는 50px
+      
+          if (window.scrollY > scrollThreshold) {  // 스크롤이 설정된 기준 이상 내려갔을 때
+            navbar.classList.add("bg-black", "bg-opacity-80");  // 배경색을 흰색으로 추가
+            navbar.classList.add("shadow-md");  // 그림자 추가 (선택 사항)
+          } else {
+            navbar.classList.remove("bg-black", "bg-opacity-80");  // 배경색 제거
+            navbar.classList.remove("shadow-md");  // 그림자 제거
+          }
+        });
+    </script>
 </body>
 </html>
