@@ -28,11 +28,11 @@
                 </nav>
             </div>
         </div>
-        <div class="main-banner">
-            <div class="banner-content">
+        <div class="main-banner relative">
+            <img src="./img/close-shot-sea-waves-hitting-shore.jpg" class="absolute inset-0 w-full h-full object-cover" alt="" decoding="async">
+            <div class="banner-content flex items-center justify-center h-screen z-10">
                 <h1 class="text-white font-bold">blueshower</h1>
                 <p class="uppercase text-white">webdesign</p>
-                <img src="./img/close-shot-sea-waves-hitting-shore.jpg" class="bg-no-repeat bg-cover" alt="" decoding="async">
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
     </div>
     <script>
         window.addEventListener("scroll", function() {
-          const navbar = document.getElementById("navbar");
+          const navbar = document.getElementById(".navbar");
       
           // 화면 너비에 따라 기준을 다르게 설정
           const scrollThreshold = window.innerWidth < 768 ? 30 : 50;  // 모바일에서는 30px, PC에서는 50px
