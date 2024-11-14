@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- GitHub에서 가져온 CSS 파일 링크 (예시) -->
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/username/repository-name/main/styles.css">
     <link rel="stylesheet" href="dist/output.css">
     <title>Document</title>
 </head>
-<body class="mainPage">
+<body class="mainPage m-0 p-0">
     <div class="mainArea">
         <div class="navbar fixed bg-none">
             <div class="navbar_inner flex justify-between">
@@ -19,8 +18,8 @@
                 </div>
                 <!--nav-->
                 <nav class="flex">
-                    <ul class="text-white">
-                        <li>about</li>
+                    <ul class="flex text-white list-none">
+                        <li class="text-red-500">about</li>
                         <li>Design</li>
                         <li>Planning</li>
                         <li>Website</li>
@@ -28,34 +27,19 @@
                 </nav>
             </div>
         </div>
+        
         <div class="main-banner relative">
             <img src="./img/close-shot-sea-waves-hitting-shore.jpg" class="absolute inset-0 w-full h-full object-cover" alt="" decoding="async">
-            <div class="banner-content absolute flex items-center justify-center h-screen w-full z-20 text-white">
+            <div class="banner-content absolute inset-0 flex items-center justify-center z-10 text-white">
                 <h1 class="text-white font-bold">blueshower</h1>
                 <p class="uppercase text-white">webdesign</p>
             </div>
         </div>
     </div>
-    /**/
+    
     <div class="">
         <h1 class="bg-amber-400">Hello, Tailwind!</h1>
-        <p class="text-blue-700">안녕하세요! 반갑습니다!!!!!</p>
+        <p class="text-red-500">안녕하세요! 반갑습니다!!!!!</p>
     </div>
-    <script>
-        window.addEventListener("scroll", function() {
-          const navbar = document.getElementById(".navbar");
-      
-          // 화면 너비에 따라 기준을 다르게 설정
-          const scrollThreshold = window.innerWidth < 768 ? 30 : 50;  // 모바일에서는 30px, PC에서는 50px
-      
-          if (window.scrollY > scrollThreshold) {  // 스크롤이 설정된 기준 이상 내려갔을 때
-            navbar.classList.add("bg-black", "bg-opacity-80");  // 배경색을 흰색으로 추가
-            navbar.classList.add("shadow-md");  // 그림자 추가 (선택 사항)
-          } else {
-            navbar.classList.remove("bg-black", "bg-opacity-80");  // 배경색 제거
-            navbar.classList.remove("shadow-md");  // 그림자 제거
-          }
-        });
-    </script>
 </body>
 </html>
